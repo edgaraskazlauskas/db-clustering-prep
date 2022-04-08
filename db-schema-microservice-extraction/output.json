@@ -1,0 +1,1193 @@
+{
+  "name": "test",
+  "entities": [
+    {
+      "name": "productvendor",
+      "nanoentities": [
+        "productid",
+        "businessentityid",
+        "averageleadtime",
+        "standardprice",
+        "lastreceiptcost",
+        "lastreceiptdate",
+        "minorderqty",
+        "maxorderqty",
+        "onorderqty",
+        "unitmeasurecode",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "purchaseorderdetail",
+      "nanoentities": [
+        "purchaseorderid",
+        "purchaseorderdetailid",
+        "duedate",
+        "orderqty",
+        "productid",
+        "unitprice",
+        "receivedqty",
+        "rejectedqty",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "purchaseorderheader",
+      "nanoentities": [
+        "purchaseorderid",
+        "revisionnumber",
+        "status",
+        "employeeid",
+        "vendorid",
+        "shipmethodid",
+        "orderdate",
+        "shipdate",
+        "subtotal",
+        "taxamt",
+        "freight",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "shipmethod",
+      "nanoentities": [
+        "shipmethodid",
+        "name",
+        "shipbase",
+        "shiprate",
+        "rowguid",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "vendor",
+      "nanoentities": [
+        "businessentityid",
+        "accountnumber",
+        "name",
+        "creditrating",
+        "preferredvendorstatus",
+        "activeflag",
+        "purchasingwebserviceurl",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "department",
+      "nanoentities": [
+        "departmentid",
+        "name",
+        "groupname",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "employee",
+      "nanoentities": [
+        "businessentityid",
+        "nationalidnumber",
+        "loginid",
+        "jobtitle",
+        "birthdate",
+        "maritalstatus",
+        "gender",
+        "hiredate",
+        "salariedflag",
+        "vacationhours",
+        "sickleavehours",
+        "currentflag",
+        "rowguid",
+        "modifieddate",
+        "organizationnode"
+      ]
+    },
+    {
+      "name": "employeedepartmenthistory",
+      "nanoentities": [
+        "businessentityid",
+        "departmentid",
+        "shiftid",
+        "startdate",
+        "enddate",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "employeepayhistory",
+      "nanoentities": [
+        "businessentityid",
+        "ratechangedate",
+        "rate",
+        "payfrequency",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "jobcandidate",
+      "nanoentities": [
+        "jobcandidateid",
+        "businessentityid",
+        "resume",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "shift",
+      "nanoentities": [
+        "shiftid",
+        "name",
+        "starttime",
+        "endtime",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "address",
+      "nanoentities": [
+        "addressid",
+        "addressline1",
+        "addressline2",
+        "city",
+        "stateprovinceid",
+        "postalcode",
+        "spatiallocation",
+        "rowguid",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "addresstype",
+      "nanoentities": [
+        "addresstypeid",
+        "name",
+        "rowguid",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "businessentity",
+      "nanoentities": [
+        "businessentityid",
+        "rowguid",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "businessentityaddress",
+      "nanoentities": [
+        "businessentityid",
+        "addressid",
+        "addresstypeid",
+        "rowguid",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "businessentitycontact",
+      "nanoentities": [
+        "businessentityid",
+        "personid",
+        "contacttypeid",
+        "rowguid",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "contacttype",
+      "nanoentities": [
+        "contacttypeid",
+        "name",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "countryregion",
+      "nanoentities": [
+        "countryregioncode",
+        "name",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "emailaddress",
+      "nanoentities": [
+        "businessentityid",
+        "emailaddressid",
+        "emailaddress",
+        "rowguid",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "password",
+      "nanoentities": [
+        "businessentityid",
+        "passwordhash",
+        "passwordsalt",
+        "rowguid",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "person",
+      "nanoentities": [
+        "businessentityid",
+        "persontype",
+        "namestyle",
+        "title",
+        "firstname",
+        "middlename",
+        "lastname",
+        "suffix",
+        "emailpromotion",
+        "additionalcontactinfo",
+        "demographics",
+        "rowguid",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "personphone",
+      "nanoentities": [
+        "businessentityid",
+        "phonenumber",
+        "phonenumbertypeid",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "phonenumbertype",
+      "nanoentities": [
+        "phonenumbertypeid",
+        "name",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "stateprovince",
+      "nanoentities": [
+        "stateprovinceid",
+        "stateprovincecode",
+        "countryregioncode",
+        "isonlystateprovinceflag",
+        "name",
+        "territoryid",
+        "rowguid",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "billofmaterials",
+      "nanoentities": [
+        "billofmaterialsid",
+        "productassemblyid",
+        "componentid",
+        "startdate",
+        "enddate",
+        "unitmeasurecode",
+        "bomlevel",
+        "perassemblyqty",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "culture",
+      "nanoentities": [
+        "cultureid",
+        "name",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "document",
+      "nanoentities": [
+        "title",
+        "owner",
+        "folderflag",
+        "filename",
+        "fileextension",
+        "revision",
+        "changenumber",
+        "status",
+        "documentsummary",
+        "document",
+        "rowguid",
+        "modifieddate",
+        "documentnode"
+      ]
+    },
+    {
+      "name": "illustration",
+      "nanoentities": [
+        "illustrationid",
+        "diagram",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "location",
+      "nanoentities": [
+        "locationid",
+        "name",
+        "costrate",
+        "availability",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "product",
+      "nanoentities": [
+        "productid",
+        "name",
+        "productnumber",
+        "makeflag",
+        "finishedgoodsflag",
+        "color",
+        "safetystocklevel",
+        "reorderpoint",
+        "standardcost",
+        "listprice",
+        "size",
+        "sizeunitmeasurecode",
+        "weightunitmeasurecode",
+        "weight",
+        "daystomanufacture",
+        "productline",
+        "class",
+        "style",
+        "productsubcategoryid",
+        "productmodelid",
+        "sellstartdate",
+        "sellenddate",
+        "discontinueddate",
+        "rowguid",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "productcategory",
+      "nanoentities": [
+        "productcategoryid",
+        "name",
+        "rowguid",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "productcosthistory",
+      "nanoentities": [
+        "productid",
+        "startdate",
+        "enddate",
+        "standardcost",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "productdescription",
+      "nanoentities": [
+        "productdescriptionid",
+        "description",
+        "rowguid",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "productinventory",
+      "nanoentities": [
+        "productid",
+        "locationid",
+        "shelf",
+        "bin",
+        "quantity",
+        "rowguid",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "productlistpricehistory",
+      "nanoentities": [
+        "productid",
+        "startdate",
+        "enddate",
+        "listprice",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "productmodel",
+      "nanoentities": [
+        "productmodelid",
+        "name",
+        "catalogdescription",
+        "instructions",
+        "rowguid",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "productmodelproductdescriptionculture",
+      "nanoentities": [
+        "productmodelid",
+        "productdescriptionid",
+        "cultureid",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "productphoto",
+      "nanoentities": [
+        "productphotoid",
+        "thumbnailphoto",
+        "thumbnailphotofilename",
+        "largephoto",
+        "largephotofilename",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "productproductphoto",
+      "nanoentities": [
+        "productid",
+        "productphotoid",
+        "primary",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "productreview",
+      "nanoentities": [
+        "productreviewid",
+        "productid",
+        "reviewername",
+        "reviewdate",
+        "emailaddress",
+        "rating",
+        "comments",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "productsubcategory",
+      "nanoentities": [
+        "productsubcategoryid",
+        "productcategoryid",
+        "name",
+        "rowguid",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "scrapreason",
+      "nanoentities": [
+        "scrapreasonid",
+        "name",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "transactionhistory",
+      "nanoentities": [
+        "transactionid",
+        "productid",
+        "referenceorderid",
+        "referenceorderlineid",
+        "transactiondate",
+        "transactiontype",
+        "quantity",
+        "actualcost",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "transactionhistoryarchive",
+      "nanoentities": [
+        "transactionid",
+        "productid",
+        "referenceorderid",
+        "referenceorderlineid",
+        "transactiondate",
+        "transactiontype",
+        "quantity",
+        "actualcost",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "unitmeasure",
+      "nanoentities": [
+        "unitmeasurecode",
+        "name",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "workorder",
+      "nanoentities": [
+        "workorderid",
+        "productid",
+        "orderqty",
+        "scrappedqty",
+        "startdate",
+        "enddate",
+        "duedate",
+        "scrapreasonid",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "workorderrouting",
+      "nanoentities": [
+        "workorderid",
+        "productid",
+        "operationsequence",
+        "locationid",
+        "scheduledstartdate",
+        "scheduledenddate",
+        "actualstartdate",
+        "actualenddate",
+        "actualresourcehrs",
+        "plannedcost",
+        "actualcost",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "creditcard",
+      "nanoentities": [
+        "creditcardid",
+        "cardtype",
+        "cardnumber",
+        "expmonth",
+        "expyear",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "currency",
+      "nanoentities": [
+        "currencycode",
+        "name",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "currencyrate",
+      "nanoentities": [
+        "currencyrateid",
+        "currencyratedate",
+        "fromcurrencycode",
+        "tocurrencycode",
+        "averagerate",
+        "endofdayrate",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "customer",
+      "nanoentities": [
+        "customerid",
+        "personid",
+        "storeid",
+        "territoryid",
+        "rowguid",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "salesorderdetail",
+      "nanoentities": [
+        "salesorderid",
+        "salesorderdetailid",
+        "carriertrackingnumber",
+        "orderqty",
+        "productid",
+        "specialofferid",
+        "unitprice",
+        "unitpricediscount",
+        "rowguid",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "salesorderheader",
+      "nanoentities": [
+        "salesorderid",
+        "revisionnumber",
+        "orderdate",
+        "duedate",
+        "shipdate",
+        "status",
+        "onlineorderflag",
+        "purchaseordernumber",
+        "accountnumber",
+        "customerid",
+        "salespersonid",
+        "territoryid",
+        "billtoaddressid",
+        "shiptoaddressid",
+        "shipmethodid",
+        "creditcardid",
+        "creditcardapprovalcode",
+        "currencyrateid",
+        "subtotal",
+        "taxamt",
+        "freight",
+        "totaldue",
+        "comment",
+        "rowguid",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "salesperson",
+      "nanoentities": [
+        "businessentityid",
+        "territoryid",
+        "salesquota",
+        "bonus",
+        "commissionpct",
+        "salesytd",
+        "saleslastyear",
+        "rowguid",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "salespersonquotahistory",
+      "nanoentities": [
+        "businessentityid",
+        "quotadate",
+        "salesquota",
+        "rowguid",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "salesreason",
+      "nanoentities": [
+        "salesreasonid",
+        "name",
+        "reasontype",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "salestaxrate",
+      "nanoentities": [
+        "salestaxrateid",
+        "stateprovinceid",
+        "taxtype",
+        "taxrate",
+        "name",
+        "rowguid",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "salesterritory",
+      "nanoentities": [
+        "territoryid",
+        "name",
+        "countryregioncode",
+        "group",
+        "salesytd",
+        "saleslastyear",
+        "costytd",
+        "costlastyear",
+        "rowguid",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "salesterritoryhistory",
+      "nanoentities": [
+        "businessentityid",
+        "territoryid",
+        "startdate",
+        "enddate",
+        "rowguid",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "shoppingcartitem",
+      "nanoentities": [
+        "shoppingcartitemid",
+        "shoppingcartid",
+        "quantity",
+        "productid",
+        "datecreated",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "specialoffer",
+      "nanoentities": [
+        "specialofferid",
+        "description",
+        "discountpct",
+        "type",
+        "category",
+        "startdate",
+        "enddate",
+        "minqty",
+        "maxqty",
+        "rowguid",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "specialofferproduct",
+      "nanoentities": [
+        "specialofferid",
+        "productid",
+        "rowguid",
+        "modifieddate"
+      ]
+    },
+    {
+      "name": "store",
+      "nanoentities": [
+        "businessentityid",
+        "name",
+        "salespersonid",
+        "demographics",
+        "rowguid",
+        "modifieddate"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "origin": "productvendor",
+      "destination": "product",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "productvendor",
+      "destination": "vendor",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "productvendor",
+      "destination": "unitmeasure",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "purchaseorderdetail",
+      "destination": "purchaseorderheader",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "purchaseorderdetail",
+      "destination": "product",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "purchaseorderheader",
+      "destination": "employee",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "purchaseorderheader",
+      "destination": "vendor",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "purchaseorderheader",
+      "destination": "shipmethod",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "vendor",
+      "destination": "businessentity",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "employee",
+      "destination": "person",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "employeedepartmenthistory",
+      "destination": "employee",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "employeedepartmenthistory",
+      "destination": "department",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "employeedepartmenthistory",
+      "destination": "shift",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "employeepayhistory",
+      "destination": "employee",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "jobcandidate",
+      "destination": "employee",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "address",
+      "destination": "stateprovince",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "businessentityaddress",
+      "destination": "businessentity",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "businessentityaddress",
+      "destination": "address",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "businessentityaddress",
+      "destination": "addresstype",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "businessentitycontact",
+      "destination": "businessentity",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "businessentitycontact",
+      "destination": "person",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "businessentitycontact",
+      "destination": "contacttype",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "emailaddress",
+      "destination": "person",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "password",
+      "destination": "person",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "businessentity",
+      "destination": "person",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "personphone",
+      "destination": "person",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "personphone",
+      "destination": "phonenumbertype",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "stateprovince",
+      "destination": "countryregion",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "stateprovince",
+      "destination": "salesterritory",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "billofmaterials",
+      "destination": "product",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "billofmaterials",
+      "destination": "unitmeasure",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "document",
+      "destination": "employee",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "product",
+      "destination": "unitmeasure",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "product",
+      "destination": "productsubcategory",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "product",
+      "destination": "productmodel",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "productcosthistory",
+      "destination": "product",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "product",
+      "destination": "document",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "document",
+      "destination": "product",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "productinventory",
+      "destination": "product",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "productinventory",
+      "destination": "location",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "productlistpricehistory",
+      "destination": "product",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "productmodel",
+      "destination": "illustration",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "illustration",
+      "destination": "productmodel",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "productmodelproductdescriptionculture",
+      "destination": "productmodel",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "productmodelproductdescriptionculture",
+      "destination": "productdescription",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "productmodelproductdescriptionculture",
+      "destination": "culture",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "productproductphoto",
+      "destination": "product",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "productproductphoto",
+      "destination": "productphoto",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "productreview",
+      "destination": "product",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "productsubcategory",
+      "destination": "productcategory",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "transactionhistory",
+      "destination": "product",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "workorder",
+      "destination": "product",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "workorder",
+      "destination": "scrapreason",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "workorderrouting",
+      "destination": "workorder",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "workorderrouting",
+      "destination": "location",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "countryregion",
+      "destination": "currency",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "currency",
+      "destination": "countryregion",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "currencyrate",
+      "destination": "currency",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "customer",
+      "destination": "person",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "customer",
+      "destination": "store",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "customer",
+      "destination": "salesterritory",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "person",
+      "destination": "creditcard",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "creditcard",
+      "destination": "person",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "salesorderdetail",
+      "destination": "salesorderheader",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "salesorderdetail",
+      "destination": "specialofferproduct",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "salesorderheader",
+      "destination": "customer",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "salesorderheader",
+      "destination": "salesperson",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "salesorderheader",
+      "destination": "salesterritory",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "salesorderheader",
+      "destination": "address",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "salesorderheader",
+      "destination": "shipmethod",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "salesorderheader",
+      "destination": "creditcard",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "salesorderheader",
+      "destination": "currencyrate",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "salesorderheader",
+      "destination": "salesreason",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "salesreason",
+      "destination": "salesorderheader",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "salesperson",
+      "destination": "employee",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "salesperson",
+      "destination": "salesterritory",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "salespersonquotahistory",
+      "destination": "salesperson",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "salestaxrate",
+      "destination": "stateprovince",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "salesterritory",
+      "destination": "countryregion",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "salesterritoryhistory",
+      "destination": "salesperson",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "salesterritoryhistory",
+      "destination": "salesterritory",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "shoppingcartitem",
+      "destination": "product",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "specialofferproduct",
+      "destination": "specialoffer",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "specialofferproduct",
+      "destination": "product",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "store",
+      "destination": "businessentity",
+      "type": "COMPOSITION"
+    },
+    {
+      "origin": "store",
+      "destination": "salesperson",
+      "type": "AGGREGATION"
+    }
+  ]
+}

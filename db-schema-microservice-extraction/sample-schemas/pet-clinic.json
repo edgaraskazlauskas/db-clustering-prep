@@ -1,0 +1,83 @@
+[
+  {
+    "name": "Pets",
+    "columns": [
+      {
+        "name": "id",
+        "reference": null,
+        "indices": [
+          {
+            "name": "pet_id_pkey",
+            "isPrimary": true
+          }
+        ]
+      },
+      {
+        "name": "ownerId",
+        "reference": {
+          "table": "Owners"
+        },
+        "indices": []
+      }
+    ]
+  },
+  {
+    "name": "Owners",
+    "columns": [
+      {
+        "name": "id",
+        "reference": null,
+        "indices": [
+          {
+            "name": "owner_id_pkey",
+            "isPrimary": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Clinics",
+    "columns": [
+      {
+        "name": "id",
+        "reference": null,
+        "indices": [
+          {
+            "name": "clinic_id_pkey",
+            "isPrimary": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "PetClinics",
+    "columns": [
+      {
+        "name": "petId",
+        "reference": {
+          "table": "Pets"
+        },
+        "indices": [
+          {
+            "name": "pet_id_clinic_pkey",
+            "isPrimary": true
+          }
+        ]
+      },
+      {
+        "name": "clinicId",
+        "reference": {
+          "table": "Clinics"
+        },
+        "indices": [
+          {
+            "name": "pet_id_clinic_pkey",
+            "isPrimary": true
+          }
+        ]
+      }
+    ]
+  }
+]
