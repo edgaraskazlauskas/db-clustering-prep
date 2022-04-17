@@ -1,4 +1,4 @@
-const schema = require("./sample-schemas/adventureworks.json");
+const schema = require("./sample-schemas/pet-clinic.json");
 const parseSchema = require("./app");
 
 parseSchema(schema);

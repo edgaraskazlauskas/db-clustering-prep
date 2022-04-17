@@ -1,0 +1,301 @@
+{
+  "name": "test",
+  "entities": [
+    {
+      "name": "auction",
+      "nanoentities": [
+        "id",
+        "type",
+        "startingPrice",
+        "dateStarting",
+        "dateEnding",
+        "completed",
+        "itemId",
+        "previousId",
+        "ownerId"
+      ]
+    },
+    {
+      "name": "auction_bids",
+      "nanoentities": [
+        "id",
+        "datePlaced",
+        "sum",
+        "auctionId",
+        "bidderId"
+      ]
+    },
+    {
+      "name": "auction_item_details",
+      "nanoentities": [
+        "id",
+        "drivenWheels",
+        "vin",
+        "mileage",
+        "engine",
+        "color",
+        "power",
+        "doors",
+        "body",
+        "fuel",
+        "gearbox",
+        "registrationCountry",
+        "city",
+        "country",
+        "condition",
+        "year",
+        "manufacturer",
+        "model"
+      ]
+    },
+    {
+      "name": "auction_item_photos",
+      "nanoentities": [
+        "id",
+        "url",
+        "itemId",
+        "main"
+      ]
+    },
+    {
+      "name": "auction_items",
+      "nanoentities": [
+        "id",
+        "title",
+        "description",
+        "ownerId",
+        "detailsId"
+      ]
+    },
+    {
+      "name": "bidders",
+      "nanoentities": [
+        "id",
+        "userId"
+      ]
+    },
+    {
+      "name": "companies",
+      "nanoentities": [
+        "id",
+        "name",
+        "imageId"
+      ]
+    },
+    {
+      "name": "company_photos",
+      "nanoentities": [
+        "id",
+        "url",
+        "companyId"
+      ]
+    },
+    {
+      "name": "email_changes",
+      "nanoentities": [
+        "token",
+        "newEmail",
+        "userId",
+        "validUntil",
+        "userUserId"
+      ]
+    },
+    {
+      "name": "email_verifications",
+      "nanoentities": [
+        "token",
+        "userId",
+        "validUntil",
+        "userUserId"
+      ]
+    },
+    {
+      "name": "owners",
+      "nanoentities": [
+        "id",
+        "userId"
+      ]
+    },
+    {
+      "name": "password_reset",
+      "nanoentities": [
+        "token",
+        "userId",
+        "validUntil",
+        "userUserId"
+      ]
+    },
+    {
+      "name": "representative_invitations",
+      "nanoentities": [
+        "token",
+        "companyId",
+        "email",
+        "firstName",
+        "lastName",
+        "validUntil"
+      ]
+    },
+    {
+      "name": "representatives",
+      "nanoentities": [
+        "id",
+        "userId",
+        "companyId"
+      ]
+    },
+    {
+      "name": "user_credentials",
+      "nanoentities": [
+        "userId",
+        "email",
+        "firstName",
+        "lastName",
+        "passwordHash",
+        "emailVerified",
+        "role"
+      ]
+    },
+    {
+      "name": "user_photos",
+      "nanoentities": [
+        "id",
+        "url",
+        "userId"
+      ]
+    },
+    {
+      "name": "user_profiles",
+      "nanoentities": [
+        "id",
+        "userId",
+        "email",
+        "firstName",
+        "lastName",
+        "city",
+        "settingsId",
+        "imageId"
+      ]
+    },
+    {
+      "name": "user_settings",
+      "nanoentities": [
+        "id",
+        "newAuctionEmailsEnabled",
+        "commercialEmailsEnabled"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "origin": "auction",
+      "destination": "auction_items",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "auction",
+      "destination": "owners",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "auction",
+      "destination": "bidders",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "bidders",
+      "destination": "auction",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "auction_bids",
+      "destination": "auction",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "auction_bids",
+      "destination": "bidders",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "auction_item_photos",
+      "destination": "auction_items",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "auction_items",
+      "destination": "owners",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "auction_item_details",
+      "destination": "auction_items",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "bidders",
+      "destination": "user_profiles",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "companies",
+      "destination": "company_photos",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "email_changes",
+      "destination": "user_credentials",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "email_verifications",
+      "destination": "user_credentials",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "owners",
+      "destination": "user_profiles",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "password_reset",
+      "destination": "user_credentials",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "representative_invitations",
+      "destination": "companies",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "representatives",
+      "destination": "user_profiles",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "representatives",
+      "destination": "companies",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "user_photos",
+      "destination": "user_profiles",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "user_profiles",
+      "destination": "user_credentials",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "user_profiles",
+      "destination": "user_settings",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "user_profiles",
+      "destination": "user_photos",
+      "type": "AGGREGATION"
+    }
+  ]
+}

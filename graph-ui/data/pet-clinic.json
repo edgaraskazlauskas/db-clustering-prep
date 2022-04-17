@@ -1,0 +1,41 @@
+[
+  {
+    "data": {
+      "id": "Pets"
+    }
+  },
+  {
+    "data": {
+      "id": "Owners"
+    }
+  },
+  {
+    "data": {
+      "id": "Clinics"
+    }
+  },
+  {
+    "data": {
+      "id": "Pets_Owners",
+      "source": "Pets",
+      "target": "Owners",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "Pets_Clinics",
+      "source": "Pets",
+      "target": "Clinics",
+      "closeness": 2
+    }
+  },
+  {
+    "data": {
+      "id": "Clinics_Pets",
+      "source": "Clinics",
+      "target": "Pets",
+      "closeness": 2
+    }
+  }
+]

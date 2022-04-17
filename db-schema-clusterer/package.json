@@ -1,5 +1,5 @@
 {
-  "name": "db-schema-parser",
+  "name": "db-schema-clusterer",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "extract-pg-schema": "^3.1.7"
+    "set-clustering": "^1.1.0"
   }
 }

@@ -1,0 +1,41 @@
+{
+  "name": "test",
+  "entities": [
+    {
+      "name": "Pets",
+      "nanoentities": [
+        "id",
+        "ownerId"
+      ]
+    },
+    {
+      "name": "Owners",
+      "nanoentities": [
+        "id"
+      ]
+    },
+    {
+      "name": "Clinics",
+      "nanoentities": [
+        "id"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "origin": "Pets",
+      "destination": "Owners",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "Pets",
+      "destination": "Clinics",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "Clinics",
+      "destination": "Pets",
+      "type": "AGGREGATION"
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+[
+  {
+    "data": {
+      "id": "actor"
+    }
+  },
+  {
+    "data": {
+      "id": "address"
+    }
+  },
+  {
+    "data": {
+      "id": "category"
+    }
+  },
+  {
+    "data": {
+      "id": "city"
+    }
+  },
+  {
+    "data": {
+      "id": "country"
+    }
+  },
+  {
+    "data": {
+      "id": "customer"
+    }
+  },
+  {
+    "data": {
+      "id": "film"
+    }
+  },
+  {
+    "data": {
+      "id": "film_actor"
+    }
+  },
+  {
+    "data": {
+      "id": "film_category"
+    }
+  },
+  {
+    "data": {
+      "id": "inventory"
+    }
+  },
+  {
+    "data": {
+      "id": "language"
+    }
+  },
+  {
+    "data": {
+      "id": "payment"
+    }
+  },
+  {
+    "data": {
+      "id": "rental"
+    }
+  },
+  {
+    "data": {
+      "id": "staff"
+    }
+  },
+  {
+    "data": {
+      "id": "store"
+    }
+  },
+  {
+    "data": {
+      "id": "address_city",
+      "source": "address",
+      "target": "city",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "city_country",
+      "source": "city",
+      "target": "country",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "customer_address",
+      "source": "customer",
+      "target": "address",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "film_language",
+      "source": "film",
+      "target": "language",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "film_actor_actor",
+      "source": "film_actor",
+      "target": "actor",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "film_actor_film",
+      "source": "film_actor",
+      "target": "film",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "film_category_film",
+      "source": "film_category",
+      "target": "film",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "film_category_category",
+      "source": "film_category",
+      "target": "category",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "inventory_film",
+      "source": "inventory",
+      "target": "film",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "payment_customer",
+      "source": "payment",
+      "target": "customer",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "payment_staff",
+      "source": "payment",
+      "target": "staff",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "payment_rental",
+      "source": "payment",
+      "target": "rental",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "rental_inventory",
+      "source": "rental",
+      "target": "inventory",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "rental_customer",
+      "source": "rental",
+      "target": "customer",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "rental_staff",
+      "source": "rental",
+      "target": "staff",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "staff_address",
+      "source": "staff",
+      "target": "address",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "store_staff",
+      "source": "store",
+      "target": "staff",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "store_address",
+      "source": "store",
+      "target": "address",
+      "closeness": 1
+    }
+  }
+]

@@ -1,0 +1,175 @@
+[
+  {
+    "data": {
+      "id": "Cargo"
+    }
+  },
+  {
+    "data": {
+      "id": "RouteSpecification"
+    }
+  },
+  {
+    "data": {
+      "id": "Leg"
+    }
+  },
+  {
+    "data": {
+      "id": "Voyage"
+    }
+  },
+  {
+    "data": {
+      "id": "CarrierMovement"
+    }
+  },
+  {
+    "data": {
+      "id": "Itinerary"
+    }
+  },
+  {
+    "data": {
+      "id": "Delivery"
+    }
+  },
+  {
+    "data": {
+      "id": "Location"
+    }
+  },
+  {
+    "data": {
+      "id": "HandlingEvent"
+    }
+  },
+  {
+    "data": {
+      "id": "Cargo_RouteSpecification",
+      "source": "Cargo",
+      "target": "RouteSpecification",
+      "closeness": 10
+    }
+  },
+  {
+    "data": {
+      "id": "Cargo_Leg",
+      "source": "Cargo",
+      "target": "Leg",
+      "closeness": 5
+    }
+  },
+  {
+    "data": {
+      "id": "Cargo_Delivery",
+      "source": "Cargo",
+      "target": "Delivery",
+      "closeness": -5
+    }
+  },
+  {
+    "data": {
+      "id": "Leg_Voyage",
+      "source": "Leg",
+      "target": "Voyage",
+      "closeness": -10
+    }
+  },
+  {
+    "data": {
+      "id": "Voyage_CarrierMovement",
+      "source": "Voyage",
+      "target": "CarrierMovement",
+      "closeness": 10
+    }
+  },
+  {
+    "data": {
+      "id": "Delivery_Voyage",
+      "source": "Delivery",
+      "target": "Voyage",
+      "closeness": 0
+    }
+  },
+  {
+    "data": {
+      "id": "Cargo_Location",
+      "source": "Cargo",
+      "target": "Location",
+      "closeness": -10
+    }
+  },
+  {
+    "data": {
+      "id": "RouteSpecification_Location",
+      "source": "RouteSpecification",
+      "target": "Location",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "Leg_Location",
+      "source": "Leg",
+      "target": "Location",
+      "closeness": -10
+    }
+  },
+  {
+    "data": {
+      "id": "Delivery_Location",
+      "source": "Delivery",
+      "target": "Location",
+      "closeness": -20
+    }
+  },
+  {
+    "data": {
+      "id": "CarrierMovement_Location",
+      "source": "CarrierMovement",
+      "target": "Location",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "HandlingEvent_Voyage",
+      "source": "HandlingEvent",
+      "target": "Voyage",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "HandlingEvent_Location",
+      "source": "HandlingEvent",
+      "target": "Location",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "HandlingEvent_Cargo",
+      "source": "HandlingEvent",
+      "target": "Cargo",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "Cargo_Itinerary",
+      "source": "Cargo",
+      "target": "Itinerary",
+      "closeness": 10
+    }
+  },
+  {
+    "data": {
+      "id": "Itinerary_Leg",
+      "source": "Itinerary",
+      "target": "Leg",
+      "closeness": 20
+    }
+  }
+]
