@@ -42,7 +42,7 @@ class GraphCsvWriter {
       this.nodesWriter
         .writeRecords(
           this.graph.nodes.map((node) => ({
-            name: node.getName(),
+            id: node.getName(),
           }))
         )
         .then(() => {

@@ -16,6 +16,7 @@ function main() {
     graph.print();
 
     const graphWriter = new GraphCsvWriter(mappedSchemaName, graph);
+
     graphWriter.write();
   }
 }
