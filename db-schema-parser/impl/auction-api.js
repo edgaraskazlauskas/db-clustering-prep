@@ -11,7 +11,6 @@ async function parseAuctionApiSchema() {
 
   const allTables = [];
 
-  console.log("do");
   await Promise.all(
     ["public"].map(async (schema) => {
       const result = await extractSchema(schema, connection);
@@ -19,7 +18,6 @@ async function parseAuctionApiSchema() {
     })
   );
 
-  console.log("done");
   fs.writeFileSync("AuctionApi.json", JSON.stringify(allTables, null, 2));
 }
 

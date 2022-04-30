@@ -102,14 +102,6 @@
   },
   {
     "data": {
-      "id": "auction_user_profiles",
-      "source": "auction",
-      "target": "user_profiles",
-      "closeness": 1
-    }
-  },
-  {
-    "data": {
       "id": "auction_allowed_users_user_profile",
       "source": "auction_allowed_users",
       "target": "user_profiles",

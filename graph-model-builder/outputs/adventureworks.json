@@ -1,0 +1,1005 @@
+[
+  {
+    "data": {
+      "id": "productvendor"
+    }
+  },
+  {
+    "data": {
+      "id": "purchaseorderdetail"
+    }
+  },
+  {
+    "data": {
+      "id": "purchaseorderheader"
+    }
+  },
+  {
+    "data": {
+      "id": "shipmethod"
+    }
+  },
+  {
+    "data": {
+      "id": "vendor"
+    }
+  },
+  {
+    "data": {
+      "id": "department"
+    }
+  },
+  {
+    "data": {
+      "id": "employee"
+    }
+  },
+  {
+    "data": {
+      "id": "employeedepartmenthistory"
+    }
+  },
+  {
+    "data": {
+      "id": "employeepayhistory"
+    }
+  },
+  {
+    "data": {
+      "id": "jobcandidate"
+    }
+  },
+  {
+    "data": {
+      "id": "shift"
+    }
+  },
+  {
+    "data": {
+      "id": "address"
+    }
+  },
+  {
+    "data": {
+      "id": "addresstype"
+    }
+  },
+  {
+    "data": {
+      "id": "businessentity"
+    }
+  },
+  {
+    "data": {
+      "id": "businessentityaddress"
+    }
+  },
+  {
+    "data": {
+      "id": "businessentitycontact"
+    }
+  },
+  {
+    "data": {
+      "id": "contacttype"
+    }
+  },
+  {
+    "data": {
+      "id": "countryregion"
+    }
+  },
+  {
+    "data": {
+      "id": "emailaddress"
+    }
+  },
+  {
+    "data": {
+      "id": "password"
+    }
+  },
+  {
+    "data": {
+      "id": "person"
+    }
+  },
+  {
+    "data": {
+      "id": "personphone"
+    }
+  },
+  {
+    "data": {
+      "id": "phonenumbertype"
+    }
+  },
+  {
+    "data": {
+      "id": "stateprovince"
+    }
+  },
+  {
+    "data": {
+      "id": "billofmaterials"
+    }
+  },
+  {
+    "data": {
+      "id": "culture"
+    }
+  },
+  {
+    "data": {
+      "id": "document"
+    }
+  },
+  {
+    "data": {
+      "id": "illustration"
+    }
+  },
+  {
+    "data": {
+      "id": "location"
+    }
+  },
+  {
+    "data": {
+      "id": "product"
+    }
+  },
+  {
+    "data": {
+      "id": "productcategory"
+    }
+  },
+  {
+    "data": {
+      "id": "productcosthistory"
+    }
+  },
+  {
+    "data": {
+      "id": "productdescription"
+    }
+  },
+  {
+    "data": {
+      "id": "productinventory"
+    }
+  },
+  {
+    "data": {
+      "id": "productlistpricehistory"
+    }
+  },
+  {
+    "data": {
+      "id": "productmodel"
+    }
+  },
+  {
+    "data": {
+      "id": "productmodelproductdescriptionculture"
+    }
+  },
+  {
+    "data": {
+      "id": "productphoto"
+    }
+  },
+  {
+    "data": {
+      "id": "productproductphoto"
+    }
+  },
+  {
+    "data": {
+      "id": "productreview"
+    }
+  },
+  {
+    "data": {
+      "id": "productsubcategory"
+    }
+  },
+  {
+    "data": {
+      "id": "scrapreason"
+    }
+  },
+  {
+    "data": {
+      "id": "transactionhistory"
+    }
+  },
+  {
+    "data": {
+      "id": "transactionhistoryarchive"
+    }
+  },
+  {
+    "data": {
+      "id": "unitmeasure"
+    }
+  },
+  {
+    "data": {
+      "id": "workorder"
+    }
+  },
+  {
+    "data": {
+      "id": "workorderrouting"
+    }
+  },
+  {
+    "data": {
+      "id": "creditcard"
+    }
+  },
+  {
+    "data": {
+      "id": "currency"
+    }
+  },
+  {
+    "data": {
+      "id": "currencyrate"
+    }
+  },
+  {
+    "data": {
+      "id": "customer"
+    }
+  },
+  {
+    "data": {
+      "id": "salesorderdetail"
+    }
+  },
+  {
+    "data": {
+      "id": "salesorderheader"
+    }
+  },
+  {
+    "data": {
+      "id": "salesperson"
+    }
+  },
+  {
+    "data": {
+      "id": "salespersonquotahistory"
+    }
+  },
+  {
+    "data": {
+      "id": "salesreason"
+    }
+  },
+  {
+    "data": {
+      "id": "salestaxrate"
+    }
+  },
+  {
+    "data": {
+      "id": "salesterritory"
+    }
+  },
+  {
+    "data": {
+      "id": "salesterritoryhistory"
+    }
+  },
+  {
+    "data": {
+      "id": "shoppingcartitem"
+    }
+  },
+  {
+    "data": {
+      "id": "specialoffer"
+    }
+  },
+  {
+    "data": {
+      "id": "specialofferproduct"
+    }
+  },
+  {
+    "data": {
+      "id": "store"
+    }
+  },
+  {
+    "data": {
+      "id": "productvendor_product",
+      "source": "productvendor",
+      "target": "product",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "productvendor_vendor",
+      "source": "productvendor",
+      "target": "vendor",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "productvendor_unitmeasure",
+      "source": "productvendor",
+      "target": "unitmeasure",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "purchaseorderdetail_purchaseorderheader",
+      "source": "purchaseorderdetail",
+      "target": "purchaseorderheader",
+      "closeness": 19
+    }
+  },
+  {
+    "data": {
+      "id": "purchaseorderdetail_product",
+      "source": "purchaseorderdetail",
+      "target": "product",
+      "closeness": 4
+    }
+  },
+  {
+    "data": {
+      "id": "purchaseorderheader_employee",
+      "source": "purchaseorderheader",
+      "target": "employee",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "purchaseorderheader_vendor",
+      "source": "purchaseorderheader",
+      "target": "vendor",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "purchaseorderheader_shipmethod",
+      "source": "purchaseorderheader",
+      "target": "shipmethod",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "vendor_businessentity",
+      "source": "vendor",
+      "target": "businessentity",
+      "closeness": 10
+    }
+  },
+  {
+    "data": {
+      "id": "employee_person",
+      "source": "employee",
+      "target": "person",
+      "closeness": 10
+    }
+  },
+  {
+    "data": {
+      "id": "employeedepartmenthistory_employee",
+      "source": "employeedepartmenthistory",
+      "target": "employee",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "employeedepartmenthistory_department",
+      "source": "employeedepartmenthistory",
+      "target": "department",
+      "closeness": 16
+    }
+  },
+  {
+    "data": {
+      "id": "employeedepartmenthistory_shift",
+      "source": "employeedepartmenthistory",
+      "target": "shift",
+      "closeness": 16
+    }
+  },
+  {
+    "data": {
+      "id": "employeepayhistory_employee",
+      "source": "employeepayhistory",
+      "target": "employee",
+      "closeness": 10
+    }
+  },
+  {
+    "data": {
+      "id": "jobcandidate_employee",
+      "source": "jobcandidate",
+      "target": "employee",
+      "closeness": 10
+    }
+  },
+  {
+    "data": {
+      "id": "address_stateprovince",
+      "source": "address",
+      "target": "stateprovince",
+      "closeness": 10
+    }
+  },
+  {
+    "data": {
+      "id": "businessentityaddress_businessentity",
+      "source": "businessentityaddress",
+      "target": "businessentity",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "businessentityaddress_address",
+      "source": "businessentityaddress",
+      "target": "address",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "businessentityaddress_addresstype",
+      "source": "businessentityaddress",
+      "target": "addresstype",
+      "closeness": 16
+    }
+  },
+  {
+    "data": {
+      "id": "businessentitycontact_businessentity",
+      "source": "businessentitycontact",
+      "target": "businessentity",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "businessentitycontact_person",
+      "source": "businessentitycontact",
+      "target": "person",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "businessentitycontact_contacttype",
+      "source": "businessentitycontact",
+      "target": "contacttype",
+      "closeness": 16
+    }
+  },
+  {
+    "data": {
+      "id": "emailaddress_person",
+      "source": "emailaddress",
+      "target": "person",
+      "closeness": 10
+    }
+  },
+  {
+    "data": {
+      "id": "password_person",
+      "source": "password",
+      "target": "person",
+      "closeness": 10
+    }
+  },
+  {
+    "data": {
+      "id": "businessentity_person",
+      "source": "businessentity",
+      "target": "person",
+      "closeness": 10
+    }
+  },
+  {
+    "data": {
+      "id": "personphone_person",
+      "source": "personphone",
+      "target": "person",
+      "closeness": 4
+    }
+  },
+  {
+    "data": {
+      "id": "personphone_phonenumbertype",
+      "source": "personphone",
+      "target": "phonenumbertype",
+      "closeness": 19
+    }
+  },
+  {
+    "data": {
+      "id": "stateprovince_countryregion",
+      "source": "stateprovince",
+      "target": "countryregion",
+      "closeness": 4
+    }
+  },
+  {
+    "data": {
+      "id": "stateprovince_salesterritory",
+      "source": "stateprovince",
+      "target": "salesterritory",
+      "closeness": 4
+    }
+  },
+  {
+    "data": {
+      "id": "billofmaterials_product",
+      "source": "billofmaterials",
+      "target": "product",
+      "closeness": 4
+    }
+  },
+  {
+    "data": {
+      "id": "billofmaterials_unitmeasure",
+      "source": "billofmaterials",
+      "target": "unitmeasure",
+      "closeness": 4
+    }
+  },
+  {
+    "data": {
+      "id": "document_employee",
+      "source": "document",
+      "target": "employee",
+      "closeness": 4
+    }
+  },
+  {
+    "data": {
+      "id": "product_unitmeasure",
+      "source": "product",
+      "target": "unitmeasure",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "product_productsubcategory",
+      "source": "product",
+      "target": "productsubcategory",
+      "closeness": 13
+    }
+  },
+  {
+    "data": {
+      "id": "product_productmodel",
+      "source": "product",
+      "target": "productmodel",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "productcosthistory_product",
+      "source": "productcosthistory",
+      "target": "product",
+      "closeness": 10
+    }
+  },
+  {
+    "data": {
+      "id": "product_document",
+      "source": "product",
+      "target": "document",
+      "closeness": 13
+    }
+  },
+  {
+    "data": {
+      "id": "document_product",
+      "source": "document",
+      "target": "product",
+      "closeness": 4
+    }
+  },
+  {
+    "data": {
+      "id": "productinventory_product",
+      "source": "productinventory",
+      "target": "product",
+      "closeness": 4
+    }
+  },
+  {
+    "data": {
+      "id": "productinventory_location",
+      "source": "productinventory",
+      "target": "location",
+      "closeness": 4
+    }
+  },
+  {
+    "data": {
+      "id": "productlistpricehistory_product",
+      "source": "productlistpricehistory",
+      "target": "product",
+      "closeness": 10
+    }
+  },
+  {
+    "data": {
+      "id": "productmodel_illustration",
+      "source": "productmodel",
+      "target": "illustration",
+      "closeness": 25
+    }
+  },
+  {
+    "data": {
+      "id": "illustration_productmodel",
+      "source": "illustration",
+      "target": "productmodel",
+      "closeness": 10
+    }
+  },
+  {
+    "data": {
+      "id": "productmodelproductdescriptionculture_productmodel",
+      "source": "productmodelproductdescriptionculture",
+      "target": "productmodel",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "productmodelproductdescriptionculture_productdescription",
+      "source": "productmodelproductdescriptionculture",
+      "target": "productdescription",
+      "closeness": 16
+    }
+  },
+  {
+    "data": {
+      "id": "productmodelproductdescriptionculture_culture",
+      "source": "productmodelproductdescriptionculture",
+      "target": "culture",
+      "closeness": 16
+    }
+  },
+  {
+    "data": {
+      "id": "productproductphoto_product",
+      "source": "productproductphoto",
+      "target": "product",
+      "closeness": 4
+    }
+  },
+  {
+    "data": {
+      "id": "productproductphoto_productphoto",
+      "source": "productproductphoto",
+      "target": "productphoto",
+      "closeness": 19
+    }
+  },
+  {
+    "data": {
+      "id": "productreview_product",
+      "source": "productreview",
+      "target": "product",
+      "closeness": 10
+    }
+  },
+  {
+    "data": {
+      "id": "productsubcategory_productcategory",
+      "source": "productsubcategory",
+      "target": "productcategory",
+      "closeness": 25
+    }
+  },
+  {
+    "data": {
+      "id": "transactionhistory_product",
+      "source": "transactionhistory",
+      "target": "product",
+      "closeness": 10
+    }
+  },
+  {
+    "data": {
+      "id": "workorder_product",
+      "source": "workorder",
+      "target": "product",
+      "closeness": 4
+    }
+  },
+  {
+    "data": {
+      "id": "workorder_scrapreason",
+      "source": "workorder",
+      "target": "scrapreason",
+      "closeness": 19
+    }
+  },
+  {
+    "data": {
+      "id": "workorderrouting_workorder",
+      "source": "workorderrouting",
+      "target": "workorder",
+      "closeness": 19
+    }
+  },
+  {
+    "data": {
+      "id": "workorderrouting_location",
+      "source": "workorderrouting",
+      "target": "location",
+      "closeness": 4
+    }
+  },
+  {
+    "data": {
+      "id": "countryregion_currency",
+      "source": "countryregion",
+      "target": "currency",
+      "closeness": 10
+    }
+  },
+  {
+    "data": {
+      "id": "currency_countryregion",
+      "source": "currency",
+      "target": "countryregion",
+      "closeness": 10
+    }
+  },
+  {
+    "data": {
+      "id": "currencyrate_currency",
+      "source": "currencyrate",
+      "target": "currency",
+      "closeness": 10
+    }
+  },
+  {
+    "data": {
+      "id": "customer_person",
+      "source": "customer",
+      "target": "person",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "customer_store",
+      "source": "customer",
+      "target": "store",
+      "closeness": 16
+    }
+  },
+  {
+    "data": {
+      "id": "customer_salesterritory",
+      "source": "customer",
+      "target": "salesterritory",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "person_creditcard",
+      "source": "person",
+      "target": "creditcard",
+      "closeness": 10
+    }
+  },
+  {
+    "data": {
+      "id": "creditcard_person",
+      "source": "creditcard",
+      "target": "person",
+      "closeness": 10
+    }
+  },
+  {
+    "data": {
+      "id": "salesorderdetail_salesorderheader",
+      "source": "salesorderdetail",
+      "target": "salesorderheader",
+      "closeness": 4
+    }
+  },
+  {
+    "data": {
+      "id": "salesorderdetail_specialofferproduct",
+      "source": "salesorderdetail",
+      "target": "specialofferproduct",
+      "closeness": 19
+    }
+  },
+  {
+    "data": {
+      "id": "salesorderheader_customer",
+      "source": "salesorderheader",
+      "target": "customer",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "salesorderheader_salesperson",
+      "source": "salesorderheader",
+      "target": "salesperson",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "salesorderheader_salesterritory",
+      "source": "salesorderheader",
+      "target": "salesterritory",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "salesorderheader_address",
+      "source": "salesorderheader",
+      "target": "address",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "salesorderheader_shipmethod",
+      "source": "salesorderheader",
+      "target": "shipmethod",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "salesorderheader_creditcard",
+      "source": "salesorderheader",
+      "target": "creditcard",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "salesorderheader_currencyrate",
+      "source": "salesorderheader",
+      "target": "currencyrate",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "salesorderheader_salesreason",
+      "source": "salesorderheader",
+      "target": "salesreason",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "salesreason_salesorderheader",
+      "source": "salesreason",
+      "target": "salesorderheader",
+      "closeness": 10
+    }
+  },
+  {
+    "data": {
+      "id": "salesperson_employee",
+      "source": "salesperson",
+      "target": "employee",
+      "closeness": 4
+    }
+  },
+  {
+    "data": {
+      "id": "salesperson_salesterritory",
+      "source": "salesperson",
+      "target": "salesterritory",
+      "closeness": 4
+    }
+  },
+  {
+    "data": {
+      "id": "salespersonquotahistory_salesperson",
+      "source": "salespersonquotahistory",
+      "target": "salesperson",
+      "closeness": 10
+    }
+  },
+  {
+    "data": {
+      "id": "salestaxrate_stateprovince",
+      "source": "salestaxrate",
+      "target": "stateprovince",
+      "closeness": 10
+    }
+  },
+  {
+    "data": {
+      "id": "salesterritory_countryregion",
+      "source": "salesterritory",
+      "target": "countryregion",
+      "closeness": 10
+    }
+  },
+  {
+    "data": {
+      "id": "salesterritoryhistory_salesperson",
+      "source": "salesterritoryhistory",
+      "target": "salesperson",
+      "closeness": 4
+    }
+  },
+  {
+    "data": {
+      "id": "salesterritoryhistory_salesterritory",
+      "source": "salesterritoryhistory",
+      "target": "salesterritory",
+      "closeness": 4
+    }
+  },
+  {
+    "data": {
+      "id": "shoppingcartitem_product",
+      "source": "shoppingcartitem",
+      "target": "product",
+      "closeness": 10
+    }
+  },
+  {
+    "data": {
+      "id": "specialofferproduct_specialoffer",
+      "source": "specialofferproduct",
+      "target": "specialoffer",
+      "closeness": 19
+    }
+  },
+  {
+    "data": {
+      "id": "specialofferproduct_product",
+      "source": "specialofferproduct",
+      "target": "product",
+      "closeness": 4
+    }
+  },
+  {
+    "data": {
+      "id": "store_businessentity",
+      "source": "store",
+      "target": "businessentity",
+      "closeness": 4
+    }
+  },
+  {
+    "data": {
+      "id": "store_salesperson",
+      "source": "store",
+      "target": "salesperson",
+      "closeness": 4
+    }
+  }
+]

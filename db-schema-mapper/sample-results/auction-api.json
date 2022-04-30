@@ -17,13 +17,7 @@
     },
     {
       "name": "auction_bids",
-      "nanoentities": [
-        "id",
-        "datePlaced",
-        "sum",
-        "auctionId",
-        "bidderId"
-      ]
+      "nanoentities": ["id", "datePlaced", "sum", "auctionId", "bidderId"]
     },
     {
       "name": "auction_item_details",
@@ -50,45 +44,23 @@
     },
     {
       "name": "auction_item_photos",
-      "nanoentities": [
-        "id",
-        "url",
-        "itemId",
-        "main"
-      ]
+      "nanoentities": ["id", "url", "itemId", "main"]
     },
     {
       "name": "auction_items",
-      "nanoentities": [
-        "id",
-        "title",
-        "description",
-        "ownerId",
-        "detailsId"
-      ]
+      "nanoentities": ["id", "title", "description", "ownerId", "detailsId"]
     },
     {
       "name": "bidders",
-      "nanoentities": [
-        "id",
-        "userId"
-      ]
+      "nanoentities": ["id", "userId"]
     },
     {
       "name": "companies",
-      "nanoentities": [
-        "id",
-        "name",
-        "imageId"
-      ]
+      "nanoentities": ["id", "name", "imageId"]
     },
     {
       "name": "company_photos",
-      "nanoentities": [
-        "id",
-        "url",
-        "companyId"
-      ]
+      "nanoentities": ["id", "url", "companyId"]
     },
     {
       "name": "email_changes",
@@ -102,28 +74,15 @@
     },
     {
       "name": "email_verifications",
-      "nanoentities": [
-        "token",
-        "userId",
-        "validUntil",
-        "userUserId"
-      ]
+      "nanoentities": ["token", "userId", "validUntil", "userUserId"]
     },
     {
       "name": "owners",
-      "nanoentities": [
-        "id",
-        "userId"
-      ]
+      "nanoentities": ["id", "userId"]
     },
     {
       "name": "password_reset",
-      "nanoentities": [
-        "token",
-        "userId",
-        "validUntil",
-        "userUserId"
-      ]
+      "nanoentities": ["token", "userId", "validUntil", "userUserId"]
     },
     {
       "name": "representative_invitations",
@@ -138,11 +97,7 @@
     },
     {
       "name": "representatives",
-      "nanoentities": [
-        "id",
-        "userId",
-        "companyId"
-      ]
+      "nanoentities": ["id", "userId", "companyId"]
     },
     {
       "name": "user_credentials",
@@ -158,11 +113,7 @@
     },
     {
       "name": "user_photos",
-      "nanoentities": [
-        "id",
-        "url",
-        "userId"
-      ]
+      "nanoentities": ["id", "url", "userId"]
     },
     {
       "name": "user_profiles",
@@ -194,6 +145,11 @@
     },
     {
       "origin": "auction",
+      "destination": "owners",
+      "type": "AGGREGATION"
+    },
+    {
+      "origin": "auction_items",
       "destination": "owners",
       "type": "AGGREGATION"
     },

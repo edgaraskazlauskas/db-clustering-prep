@@ -94,7 +94,7 @@
       "id": "auction_auction_items",
       "source": "auction",
       "target": "auction_items",
-      "closeness": 0
+      "closeness": 1
     }
   },
   {
@@ -102,47 +102,7 @@
       "id": "auction_owners",
       "source": "auction",
       "target": "owners",
-      "closeness": 0
-    }
-  },
-  {
-    "data": {
-      "id": "auction_bidders",
-      "source": "auction",
-      "target": "bidders",
-      "closeness": 0
-    }
-  },
-  {
-    "data": {
-      "id": "bidders_auction",
-      "source": "bidders",
-      "target": "auction",
-      "closeness": 0
-    }
-  },
-  {
-    "data": {
-      "id": "auction_bids_auction",
-      "source": "auction_bids",
-      "target": "auction",
-      "closeness": 0
-    }
-  },
-  {
-    "data": {
-      "id": "auction_bids_bidders",
-      "source": "auction_bids",
-      "target": "bidders",
-      "closeness": 0
-    }
-  },
-  {
-    "data": {
-      "id": "auction_item_photos_auction_items",
-      "source": "auction_item_photos",
-      "target": "auction_items",
-      "closeness": 46
+      "closeness": 1
     }
   },
   {
@@ -150,7 +110,55 @@
       "id": "auction_items_owners",
       "source": "auction_items",
       "target": "owners",
-      "closeness": 49
+      "closeness": 4
+    }
+  },
+  {
+    "data": {
+      "id": "auction_bidders",
+      "source": "auction",
+      "target": "bidders",
+      "closeness": 1
+    }
+  },
+  {
+    "data": {
+      "id": "bidders_auction",
+      "source": "bidders",
+      "target": "auction",
+      "closeness": 4
+    }
+  },
+  {
+    "data": {
+      "id": "auction_bids_auction",
+      "source": "auction_bids",
+      "target": "auction",
+      "closeness": 4
+    }
+  },
+  {
+    "data": {
+      "id": "auction_bids_bidders",
+      "source": "auction_bids",
+      "target": "bidders",
+      "closeness": 4
+    }
+  },
+  {
+    "data": {
+      "id": "auction_item_photos_auction_items",
+      "source": "auction_item_photos",
+      "target": "auction_items",
+      "closeness": 10
+    }
+  },
+  {
+    "data": {
+      "id": "auction_items_owners",
+      "source": "auction_items",
+      "target": "owners",
+      "closeness": 4
     }
   },
   {
@@ -158,7 +166,7 @@
       "id": "auction_item_details_auction_items",
       "source": "auction_item_details",
       "target": "auction_items",
-      "closeness": 46
+      "closeness": 10
     }
   },
   {
@@ -166,7 +174,7 @@
       "id": "bidders_user_profiles",
       "source": "bidders",
       "target": "user_profiles",
-      "closeness": 0
+      "closeness": 4
     }
   },
   {
@@ -174,7 +182,7 @@
       "id": "companies_company_photos",
       "source": "companies",
       "target": "company_photos",
-      "closeness": 52
+      "closeness": 25
     }
   },
   {
@@ -182,7 +190,7 @@
       "id": "email_changes_user_credentials",
       "source": "email_changes",
       "target": "user_credentials",
-      "closeness": 43
+      "closeness": 10
     }
   },
   {
@@ -190,7 +198,7 @@
       "id": "email_verifications_user_credentials",
       "source": "email_verifications",
       "target": "user_credentials",
-      "closeness": 43
+      "closeness": 10
     }
   },
   {
@@ -198,7 +206,7 @@
       "id": "owners_user_profiles",
       "source": "owners",
       "target": "user_profiles",
-      "closeness": 43
+      "closeness": 10
     }
   },
   {
@@ -206,7 +214,7 @@
       "id": "password_reset_user_credentials",
       "source": "password_reset",
       "target": "user_credentials",
-      "closeness": 43
+      "closeness": 10
     }
   },
   {
@@ -214,7 +222,7 @@
       "id": "representative_invitations_companies",
       "source": "representative_invitations",
       "target": "companies",
-      "closeness": 49
+      "closeness": 10
     }
   },
   {
@@ -222,7 +230,7 @@
       "id": "representatives_user_profiles",
       "source": "representatives",
       "target": "user_profiles",
-      "closeness": 0
+      "closeness": 4
     }
   },
   {
@@ -230,7 +238,7 @@
       "id": "representatives_companies",
       "source": "representatives",
       "target": "companies",
-      "closeness": 0
+      "closeness": 4
     }
   },
   {
@@ -238,7 +246,7 @@
       "id": "user_photos_user_profiles",
       "source": "user_photos",
       "target": "user_profiles",
-      "closeness": 43
+      "closeness": 10
     }
   },
   {
@@ -246,7 +254,7 @@
       "id": "user_profiles_user_credentials",
       "source": "user_profiles",
       "target": "user_credentials",
-      "closeness": 0
+      "closeness": 1
     }
   },
   {
@@ -254,7 +262,7 @@
       "id": "user_profiles_user_settings",
       "source": "user_profiles",
       "target": "user_settings",
-      "closeness": 2
+      "closeness": 16
     }
   },
   {
@@ -262,7 +270,7 @@
       "id": "user_profiles_user_photos",
       "source": "user_profiles",
       "target": "user_photos",
-      "closeness": 2
+      "closeness": 16
     }
   }
 ]
