@@ -1,23 +1,15 @@
 //@ts-check
-const Graph = require("./domain/Graph");
-const GraphCsvWriter = require("./domain/GraphCsvWriter");
+const CsvGraphModelBuilder = require("./domain/GraphModelBuilder");
 
 function main() {
   const mappedSchemas = ["adventureworks", "auction-api", "chinook", "pagila"];
 
   for (const mappedSchemaName of mappedSchemas) {
-    const {
-      entities,
-      relations,
-    } = require(`../db-schema-mapper/build/outputs/${mappedSchemaName}.json`);
+    const mappedSchema = require(`../db-schema-mapper/build/outputs/${mappedSchemaName}.json`);
 
-    const graph = new Graph(entities, relations);
+    const builder = new CsvGraphModelBuilder(mappedSchema);
 
-    graph.print();
-
-    const graphWriter = new GraphCsvWriter(mappedSchemaName, graph);
-
-    graphWriter.write();
+    builder.build();
   }
 }
 
