@@ -15,17 +15,17 @@ class GraphCsvWriter {
     this.graph = graph;
 
     this.nodesWriter = csvWriter.createObjectCsvWriter({
-      path: `outputs/${name}-nodes.csv`,
+      path: `build/outputs/${name}-nodes.csv`,
       header: [
         { id: "id", title: "id" },
         { id: "id", title: "label" },
       ],
     });
     this.edgesWriter = csvWriter.createObjectCsvWriter({
-      path: `outputs/${name}-edges.csv`,
+      path: `build/outputs/${name}-edges.csv`,
       header: [
         { id: "source", title: "source" },
-        { id: "destination", title: "destination" },
+        { id: "target", title: "target" },
         { id: "weight", title: "weight" },
       ],
     });
@@ -52,7 +52,7 @@ class GraphCsvWriter {
         .writeRecords(
           this.graph.edges.map((edge) => ({
             source: edge.getSource(),
-            destination: edge.getDestination(),
+            target: edge.getDestination(),
             weight: edge.getWeight(),
           }))
         )

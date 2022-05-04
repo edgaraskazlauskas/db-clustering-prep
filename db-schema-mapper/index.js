@@ -1,11 +1,19 @@
-const schema = require("./sample-schemas/pet-clinic.json");
 const parseSchema = require("./app");
 
-parseSchema(schema);
+function main() {
+  const schemaNames = [
+    "chinook",
+    "adventureworks",
+    "auction-api",
+    "dvd-rental",
+    "pagila",
+    "pet-clinic",
+  ];
 
-/**
- * TODO: Decide if there's a unique constraint (to find 1:1 relations) by unique or primary key indexes on foreign keys.
- * TODO: Map all relationships of all kinds to aggregate or composite relations, ignoring the actual relation type.
- * NEXT: 1:1 is composite (same lifecycle), 1:M is aggregate (same domain, semantic proximity).
- * NOTE: Composition entities are very likely with few foreign keys. But it's hard to tell.
- */
+  schemaNames.forEach((schemaName) => {
+    const schema = require(`./../db-schema-parser/build/outputs/${schemaName}.json`);
+    parseSchema(schemaName, schema);
+  });
+}
+
+main();

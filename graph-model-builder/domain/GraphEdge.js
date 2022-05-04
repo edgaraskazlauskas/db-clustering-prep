@@ -30,13 +30,15 @@ class GraphEdge {
   /**
    * @param {String} source
    * @param {String} destination
+   * @param {GraphNode} sourceNode
+   * @param {GraphNode} destinationNode
    */
-  constructor(source, destination) {
+  constructor(source, destination, sourceNode = null, destinationNode = null) {
     this.source = source;
     this.destination = destination;
 
-    this.sourceNode = null;
-    this.destinationNode = null;
+    this.sourceNode = sourceNode;
+    this.destinationNode = destinationNode;
   }
 
   getWeight() {
@@ -49,6 +51,14 @@ class GraphEdge {
 
   getDestination() {
     return this.destination;
+  }
+
+  getSourceNode() {
+    return this.sourceNode;
+  }
+
+  getDestinationNode() {
+    return this.destinationNode;
   }
 
   /**

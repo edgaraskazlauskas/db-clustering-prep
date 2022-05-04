@@ -43,8 +43,14 @@ class GraphEdgeWeight {
 
     if (srcOutgoingRelations.length > 1) {
       srcOutgoingRelations.forEach((relation) => {
-        // how many relations does this relation have?
-        this.weight -= 3;
+        // how many relations does this relation have? if none, maybe it doesn't link to another cluster and we shouldnt penalize it
+        const destinationNode = relation.getDestinationNode();
+        if (
+          destinationNode.getOutgoingRelations().length > 0 ||
+          destinationNode.getIncomingRelations().length > 1
+        ) {
+          this.weight -= 3;
+        }
       });
     }
 
