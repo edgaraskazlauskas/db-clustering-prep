@@ -14,8 +14,6 @@ const {
 } = require("./lib/erm");
 const { Database, Connection } = require("./lib/db");
 
-module.exports.Connection = Connection;
-
 module.exports = class ExtractionClient {
   /**
    * @private
@@ -43,7 +41,6 @@ module.exports = class ExtractionClient {
   }
 
   /**
-   *
    * @param {import('extract-pg-schema').TableOrView[]} extractedTables
    * @returns {EntityRelationshipModel}
    */
@@ -89,7 +86,6 @@ module.exports = class ExtractionClient {
   }
 
   /**
-   *
    * @param {Graph} graph
    */
   writeGraph(graph) {
