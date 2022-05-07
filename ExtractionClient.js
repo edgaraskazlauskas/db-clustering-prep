@@ -9,33 +9,23 @@ const {
 } = require("./lib/graph");
 const {
   EntityTable,
+  EntityTableColumn,
   EntityRelationship,
   EntityRelationshipModel,
 } = require("./lib/erm");
-const { Database, Connection } = require("./lib/db");
+const { Database } = require("./lib/db");
+const ExtractionClientConfig = require("./ExtractionClientConfig");
 
 module.exports = class ExtractionClient {
   /**
-   * @private
+   * @param {ExtractionClientConfig} config
    */
-  name;
-
-  /**
-   * @private
-   */
-  connection;
-
-  /**
-   * @param {String} name
-   * @param {Connection} connection
-   */
-  constructor(name, connection) {
-    this.name = name;
-    this.connection = connection;
+  constructor(config) {
+    this.config = config;
   }
 
   async extractDatabaseTables() {
-    const db = new Database(this.connection);
+    const db = new Database(this.config.getConnection());
     const tables = await db.extractTables();
     return tables;
   }
@@ -48,13 +38,37 @@ module.exports = class ExtractionClient {
     const model = new EntityRelationshipModel();
 
     extractedTables.forEach((tableOrView) => {
-      model.registerTable(new EntityTable(tableOrView.name));
+      model.registerTable(
+        new EntityTable(
+          tableOrView.name,
+          tableOrView.columns.map(
+            (column) =>
+              new EntityTableColumn(
+                column.name,
+                column.reference,
+                column.indices,
+                this.config
+                  .getTimestampIndicators()
+                  .some((indicator) => column.name.includes(indicator))
+              )
+          )
+        )
+      );
 
       tableOrView.columns
         .filter((column) => !!column.reference)
         .forEach((column) => {
           model.registerRelationship(
-            new EntityRelationship(tableOrView.name, column.reference.table)
+            new EntityRelationship(
+              tableOrView.name,
+              column.reference.table,
+              column.indices.some(({ name }) =>
+                this.config
+                  .getUniqueKeyIndicators()
+                  .some((indicator) => name.includes(indicator))
+              ),
+              column.indices.some(({ isPrimary }) => isPrimary)
+            )
           );
         });
     });
@@ -89,7 +103,7 @@ module.exports = class ExtractionClient {
    * @param {Graph} graph
    */
   writeGraph(graph) {
-    const writer = new GraphCsvWriter(this.name, graph);
+    const writer = new GraphCsvWriter(this.config.getName(), graph);
     writer.write();
   }
 };

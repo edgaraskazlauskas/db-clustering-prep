@@ -1,6 +1,7 @@
 // @ts-check
 
 const ExtractionClient = require("./ExtractionClient");
+const ExtractionClientConfig = require("./ExtractionClientConfig");
 const { Connection } = require("./lib/db");
 
 const connections = [
@@ -25,31 +26,29 @@ const connections = [
     "N0A8KHWWHMjRBTrc8UjL",
     "public"
   ),
-  new Connection("localhost", "Adventureworks", "postgres", "postgres", [
-    "humanresources",
-    "person",
-    "production",
-    "purchasing",
-    "sales",
-  ]),
+  // new Connection("localhost", "Adventureworks", "postgres", "postgres", [
+  //   "humanresources",
+  //   "person",
+  //   "production",
+  //   "purchasing",
+  //   "sales",
+  // ]),
 ];
 
 async function main() {
-  connections.forEach(async (connection) => {
-    const client = new ExtractionClient(connection.database, connection);
+  const extractionClientConfig = new ExtractionClientConfig();
+  const client = new ExtractionClient(extractionClientConfig);
 
-    try {
-      const tables = await client.extractDatabaseTables();
-      const entityRelationshipModel =
-        client.buildEntityRelationshipModel(tables);
-      const graph = client.buildGraph(entityRelationshipModel);
+  try {
+    const tables = await client.extractDatabaseTables();
+    const entityRelationshipModel = client.buildEntityRelationshipModel(tables);
+    const graph = client.buildGraph(entityRelationshipModel);
 
-      client.writeGraph(graph);
-    } catch (error) {
-      console.error(`Failed. Reason: ${JSON.stringify(error)}`);
-      throw error;
-    }
-  });
+    client.writeGraph(graph);
+  } catch (error) {
+    console.error(`Failed. Reason: ${error}`);
+    throw error;
+  }
 }
 
 main();
