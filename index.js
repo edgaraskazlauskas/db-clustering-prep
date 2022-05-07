@@ -2,38 +2,6 @@
 
 const ExtractionClient = require("./ExtractionClient");
 const ExtractionClientConfig = require("./ExtractionClientConfig");
-const { Connection } = require("./lib/db");
-
-const connections = [
-  new Connection(
-    "localhost",
-    "pagila",
-    "editor",
-    "N0A8KHWWHMjRBTrc8UjL",
-    "public"
-  ),
-  new Connection(
-    "localhost",
-    "auction",
-    "editor",
-    "N0A8KHWWHMjRBTrc8UjL",
-    "public"
-  ),
-  new Connection(
-    "localhost",
-    "chinook",
-    "editor",
-    "N0A8KHWWHMjRBTrc8UjL",
-    "public"
-  ),
-  // new Connection("localhost", "Adventureworks", "postgres", "postgres", [
-  //   "humanresources",
-  //   "person",
-  //   "production",
-  //   "purchasing",
-  //   "sales",
-  // ]),
-];
 
 async function main() {
   const extractionClientConfig = new ExtractionClientConfig();
