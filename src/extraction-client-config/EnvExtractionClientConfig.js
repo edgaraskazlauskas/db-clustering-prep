@@ -1,9 +1,16 @@
-//@ts-check
-const { Config } = require("./lib/config");
-const { Connection } = require("./lib/db");
+// @ts-check
 
-module.exports = class ExtractionClientConfig {
+const ExtractionClientConfigBase = require("./ExtractionClientConfigBase");
+
+const { Config } = require("./../../lib/config");
+const { Connection } = require("./../../lib/db");
+
+module.exports = class EnvExtractionClientConfig extends (
+  ExtractionClientConfigBase
+) {
   constructor() {
+    super();
+
     this.config = new Config();
   }
 

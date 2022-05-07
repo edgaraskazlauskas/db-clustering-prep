@@ -1,10 +1,10 @@
 // @ts-check
 
-const ExtractionClient = require("./ExtractionClient");
-const ExtractionClientConfig = require("./ExtractionClientConfig");
+const ExtractionClient = require("./src/extraction-client/ExtractionClient");
+const EnvExtractionClientConfig = require("./src/extraction-client-config/EnvExtractionClientConfig");
 
 async function main() {
-  const extractionClientConfig = new ExtractionClientConfig();
+  const extractionClientConfig = new EnvExtractionClientConfig();
   const client = new ExtractionClient(extractionClientConfig);
 
   try {

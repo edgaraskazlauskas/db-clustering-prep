@@ -6,19 +6,19 @@ const {
   GraphEdge,
   GraphCsvWriter,
   GraphEdgeWeight,
-} = require("./lib/graph");
+} = require("../../lib/graph");
 const {
   EntityTable,
   EntityTableColumn,
   EntityRelationship,
   EntityRelationshipModel,
-} = require("./lib/erm");
-const { Database } = require("./lib/db");
-const ExtractionClientConfig = require("./ExtractionClientConfig");
+} = require("../../lib/erm");
+const { Database } = require("../../lib/db");
+const ExtractionClientConfigBase = require("./../extraction-client-config/ExtractionClientConfigBase");
 
 module.exports = class ExtractionClient {
   /**
-   * @param {ExtractionClientConfig} config
+   * @param {ExtractionClientConfigBase} config
    */
   constructor(config) {
     this.config = config;
