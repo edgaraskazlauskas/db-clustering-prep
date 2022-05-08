@@ -58,18 +58,18 @@ module.exports = class ExtractionClient {
       tableOrView.columns
         .filter((column) => !!column.reference)
         .forEach((column) => {
-          model.registerRelationship(
-            new EntityRelationship(
-              tableOrView.name,
-              column.reference.table,
-              column.indices.some(({ name }) =>
-                this.config
-                  .getUniqueKeyIndicators()
-                  .some((indicator) => name.includes(indicator))
-              ),
-              column.indices.some(({ isPrimary }) => isPrimary)
-            )
+          const relationship = new EntityRelationship(
+            tableOrView.name,
+            column.reference.table,
+            column.indices.some(({ name }) =>
+              this.config
+                .getUniqueKeyIndicators()
+                .some((indicator) => name.includes(indicator))
+            ),
+            column.indices.some(({ isPrimary }) => isPrimary)
           );
+
+          model.registerRelationship(relationship);
         });
     });
 
