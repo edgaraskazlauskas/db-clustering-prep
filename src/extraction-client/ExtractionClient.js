@@ -16,6 +16,10 @@ const {
 const { Database } = require("../../lib/db");
 const ExtractionClientConfigBase = require("./../extraction-client-config/ExtractionClientConfigBase");
 
+const Constraint = {
+  DataConsistency: "DATA_CONSISTENCY",
+};
+
 module.exports = class ExtractionClient {
   /**
    * @param {ExtractionClientConfigBase} config
@@ -86,17 +90,60 @@ module.exports = class ExtractionClient {
 
     const edges = entityRelationshipModel
       .getRelationships()
-      .map(
-        (relationship) =>
-          new GraphEdge(
-            relationship.child,
-            relationship.parent,
-            new GraphEdgeWeight(relationship.strength)
+      .map((relationship) => {
+        const graphRelationshipStrength =
+          this.calculateGraphRelationshipStrength(relationship);
+        const userInputModelRelationshipStrength =
+          this.calculateUserInputModelRelationshipStrength(relationship);
+
+        return new GraphEdge(
+          relationship.child,
+          relationship.parent,
+          new GraphEdgeWeight(
+            graphRelationshipStrength + userInputModelRelationshipStrength
           )
-      );
+        );
+      });
 
     const graph = new Graph(nodes, edges);
     return graph;
+  }
+
+  /**
+   * @private
+   * @param {EntityRelationship} relationship
+   */
+  calculateGraphRelationshipStrength(relationship) {
+    return relationship.calculateStrength();
+  }
+
+  /**
+   * @private
+   * @param {EntityRelationship} relationship
+   */
+  calculateUserInputModelRelationshipStrength(relationship) {
+    return 0;
+    const constraints = [
+      {
+        entities: ["auction", "auction_bids", "auction_allowed_bidders"],
+        type: Constraint.DataConsistency,
+        weight: 20,
+      },
+    ];
+
+    if (relationship.child === "auction_bids") {
+      console.debug("bids", {
+        entities: [relationship.child, relationship.parent],
+        constraint: constraints[0].entities,
+      });
+    }
+    const applicableConstraints = constraints.filter(({ entities }) =>
+      [relationship.child, relationship.parent].every((entityName) =>
+        entities.includes(entityName)
+      )
+    );
+
+    return applicableConstraints.reduce((acc, curr) => acc + curr.weight, 0);
   }
 
   /**

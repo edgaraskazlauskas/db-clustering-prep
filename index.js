@@ -5,46 +5,46 @@ const PlainExtractionClientConfig = require("./src/extraction-client-config/Plai
 
 async function main() {
   const configs = [
-    // new PlainExtractionClientConfig(
-    //   "pagila",
-    //   "localhost",
-    //   "pagila",
-    //   "editor",
-    //   "N0A8KHWWHMjRBTrc8UjL",
-    //   "public"
-    // ),
-    // new PlainExtractionClientConfig(
-    //   "auction",
-    //   "localhost",
-    //   "auction",
-    //   "editor",
-    //   "N0A8KHWWHMjRBTrc8UjL",
-    //   "public"
-    // ),
-    // new PlainExtractionClientConfig(
-    //   "chinook",
-    //   "localhost",
-    //   "chinook",
-    //   "editor",
-    //   "N0A8KHWWHMjRBTrc8UjL",
-    //   "public"
-    // ),
-    // new PlainExtractionClientConfig(
-    //   "northwind",
-    //   "localhost",
-    //   "northwind",
-    //   "editor",
-    //   "N0A8KHWWHMjRBTrc8UjL",
-    //   "public"
-    // ),
     new PlainExtractionClientConfig(
-      "adventureworks",
+      "pagila",
       "localhost",
-      "Adventureworks",
-      "postgres",
-      "postgres",
-      ["humanresources", "person", "production", "purchasing", "sales"]
+      "pagila",
+      "editor",
+      "N0A8KHWWHMjRBTrc8UjL",
+      "public"
     ),
+    new PlainExtractionClientConfig(
+      "auction",
+      "localhost",
+      "auction",
+      "editor",
+      "N0A8KHWWHMjRBTrc8UjL",
+      "public"
+    ),
+    new PlainExtractionClientConfig(
+      "chinook",
+      "localhost",
+      "chinook",
+      "editor",
+      "N0A8KHWWHMjRBTrc8UjL",
+      "public"
+    ),
+    new PlainExtractionClientConfig(
+      "northwind",
+      "localhost",
+      "northwind",
+      "editor",
+      "N0A8KHWWHMjRBTrc8UjL",
+      "public"
+    ),
+    // new PlainExtractionClientConfig(
+    //   "adventureworks",
+    //   "localhost",
+    //   "Adventureworks",
+    //   "postgres",
+    //   "postgres",
+    //   ["humanresources", "person", "production", "purchasing", "sales"]
+    // ),
   ];
 
   configs.forEach(async (extractionClientConfig) => {
