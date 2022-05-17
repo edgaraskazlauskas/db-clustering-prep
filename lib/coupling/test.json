@@ -1,0 +1,18 @@
+{
+  "config": {
+    "data-consistency": 5,
+    "predefined-service": 5
+  },
+  "constraints": [
+    {
+      "entities": ["auction", "auction_items"],
+      "constraint": ["predefined-service"]
+    }
+  ],
+  "use-cases": [
+    {
+      "entities": ["auction", "auction_allowed_bidders", "auction_bids"],
+      "requirements": ["data-consistency"]
+    }
+  ]
+}
