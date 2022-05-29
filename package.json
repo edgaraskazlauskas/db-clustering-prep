@@ -19,8 +19,10 @@
   "homepage": "https://github.com/edgaraskazlauskas/microservice-extraction-db#readme",
   "dependencies": {
     "commander": "^9.2.0",
+    "csv-reader": "^1.0.8",
     "csv-writer": "^1.6.0",
     "dotenv": "^16.0.0",
-    "extract-pg-schema": "^3.1.7"
+    "extract-pg-schema": "^3.1.7",
+    "lodash": "^4.17.21"
   }
 }
