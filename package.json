@@ -1,22 +1,22 @@
 {
-  "name": "microservice-extraction",
+  "name": "db-clustering-prep",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "cli.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "run": "node cli.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/edgaraskazlauskas/microservice-extraction-db.git"
+    "url": "git+https://github.com/edgaraskazlauskas/db-clustering-prep.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/edgaraskazlauskas/microservice-extraction-db/issues"
+    "url": "https://github.com/edgaraskazlauskas/db-clustering-prep/issues"
   },
-  "homepage": "https://github.com/edgaraskazlauskas/microservice-extraction-db#readme",
+  "homepage": "https://github.com/edgaraskazlauskas/db-clustering-prep#readme",
   "dependencies": {
     "commander": "^9.2.0",
     "csv-reader": "^1.0.8",
