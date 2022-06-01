@@ -6,12 +6,6 @@ const {
   PlainExtractionClientConfig,
   ExtractionClient,
 } = require("./lib/extraction");
-const {
-  DominatingClusterMetric,
-  ClusterSeparationMetric,
-  AverageClusterSizeMetric,
-  ExcessiveClusterMetric,
-} = require("./lib/comparer/metrics");
 
 console.clear();
 
@@ -31,7 +25,11 @@ Commander.program
     "-s, --dbschema <string>",
     "Schema name (public by default)",
     "public"
-  );
+  )
+  .option("--parentHubPenalty <number>")
+  .option("--parentOnlyChildReward <number>")
+  .option("--relationshipPresenceReward <number>")
+  .option("--leafChildTableReward <number>");
 
 Commander.program.parse();
 
@@ -45,16 +43,13 @@ async function main() {
     options.dbuser,
     options.dbpassword,
     options.dbschema.split(","),
-    options.weighted
+    options.weighted,
+    options.parentHubPenalty,
+    options.parentOnlyChildReward,
+    options.relationshipPresenceReward,
+    options.leafChildTableReward
   );
   const client = new ExtractionClient(config);
-
-  async function evaluateCoreMetrics() {
-    await new DominatingClusterMetric(options.dbname).evaluate();
-    await new ClusterSeparationMetric(options.dbname).evaluate();
-    await new ExcessiveClusterMetric(options.dbname).evaluate();
-    await new AverageClusterSizeMetric(options.dbname).evaluate();
-  }
 
   try {
     const tables = await client.extractDatabaseTables();
@@ -62,10 +57,6 @@ async function main() {
     const graph = client.buildGraph(entityRelationshipModel);
 
     client.writeGraph(graph);
-
-    if (options.metrics) {
-      await evaluateCoreMetrics();
-    }
   } catch (error) {
     console.error(`Extraction failed. Reason: "${error}".`);
     throw error;
