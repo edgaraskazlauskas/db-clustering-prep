@@ -1,11 +1,10 @@
 // @ts-check
 
-const ReadLine = require("readline");
 const Commander = require("commander");
 const {
   PlainExtractionClientConfig,
   ExtractionClient,
-} = require("./lib/extraction");
+} = require("../lib/extraction");
 
 console.clear();
 
@@ -64,14 +63,3 @@ async function main() {
 }
 
 main();
-
-ReadLine.emitKeypressEvents(process.stdin);
-process.stdin.setRawMode(true);
-
-process.stdin.on("keypress", (str, key) => {
-  if (key.name === "r") {
-    main();
-  } else if (key.name === "q") {
-    process.exit();
-  }
-});

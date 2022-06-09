@@ -4,8 +4,8 @@
   "description": "",
   "main": "cli.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "run": "node cli.js"
+    "run:extractor": "node bin/extractor-cli.js",
+    "run:comparer": "node bin/comparer-cli.js"
   },
   "repository": {
     "type": "git",
